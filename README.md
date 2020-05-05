@@ -8,7 +8,7 @@ In the notebook `campus_data.ipynb` I first explore some trends in the data and 
 
 ### The model
 
-I use a `RandomForestRegressor` model from the scikit learn python package.  The only non-default hyperparameter I use is `min_samples_leaf=30` to prevent overfitting the model.  As the model trains in a few seconds, I am able to tune this hyperparameter by hand.  
+I use a `RandomForestRegressor` model from the scikit learn python package.  The only non-default hyperparameter I use is `min_samples_leaf=10` to prevent overfitting the model.  As the model trains in a few seconds, I am able to tune this hyperparameter by hand.  
 
 #### Feature selection
 
@@ -24,10 +24,10 @@ In the initial model design phase I use a random 20% of the data as a test set a
 
 #### Feature Importance
 
-I view the feature importance attribute of the `RandomForestRegressor` and see that unsurprisingly the feature that determines the prediction most heavily is percent economically disadvantaged.  Other features with importance are LEP percentage, SPED percentage, student count, and school level. Percentage of high mobility showed a high importance score when it was included in the model.  Features that show an importance score of less than 0.01 are percent enrolled in ECHS, and the flag for charter school.  Features that show an importance score of 0 are the flag for new school, and percentage enrolled in a TSTEM academy.  
+I view the feature importance attribute of the `RandomForestRegressor` and see that unsurprisingly the feature that determines the prediction most heavily is percent economically disadvantaged.  Other features with importance are LEP percentage, SPED percentage, student count, and school level. Percentage of high mobility showed a high importance score when it was included in the model.  Features that show an importance score of less than 0.01 are percent enrolled in ECHS, the flag for charter school, the flag for new school, and percentage enrolled in a TSTEM academy.  
 
 ### Future Work
 
 Some ideas for expanding on this project are:
-1. Encorporating geographic region as a feature
+1. Encorporating geographic region as a feature or visualizing the results geographically
 2. Using a similar analysis on districts
