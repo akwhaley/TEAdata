@@ -42,4 +42,4 @@ I use a chloropleth map to visualize overperformance for districts first for the
 #### Observations
 
 Overall, districts whose schools are over or under performing similar schools seem to be spread around the state.  
-![Texas Districts Chloropleth](/data/Texas_Districts_Chloro.png)
+![Texas Districts Chloropleth](https://github.com/akwhaley/TEAdata/master/Texas_District_Chloro.png?raw=true))
