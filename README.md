@@ -41,5 +41,8 @@ I use a chloropleth map to visualize overperformance for districts first for the
 
 #### Observations
 
-Overall, districts whose schools are over or under performing similar schools seem to be spread around the state.  
+Overall, districts whose schools are over or under performing similar schools seem to be spread around the state.  Schools in districts along most of the border outperform similar schools.  In this map, lighter colors indicate that the actual performance is greater than the score predicted by the model based on how similar schools perform.
 ![Texas Districts Chloropleth](data/Texas_District_Chloro.png)
+
+We can zoom in to a single ESC region if we want to get a closer look.  Here is the map for districts in ESC region 4 surrounding the Houston area.
+![Region 4 Chloropleth](data/Region_4_Chloro.png)
