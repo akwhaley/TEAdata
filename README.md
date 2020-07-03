@@ -26,8 +26,20 @@ In the initial model design phase I use a random 20% of the data as a test set a
 
 I view the feature importance attribute of the `RandomForestRegressor` and see that unsurprisingly the feature that determines the prediction most heavily is percent economically disadvantaged.  Other features with importance are LEP percentage, SPED percentage, student count, and school level. Percentage of high mobility showed a high importance score when it was included in the model.  Features that show an importance score of less than 0.01 are percent enrolled in ECHS, the flag for charter school, the flag for new school, and percentage enrolled in a TSTEM academy.  
 
-### Future Work
+## District Performance Visualized on a Map
 
-Some ideas for expanding on this project are:
-1. Encorporating geographic region as a feature or visualizing the results geographically
-2. Using a similar analysis on districts
+It might be interesting to compute an average Overperformance score for each district.  Because school/district properties like urban/rural or geographic region are not directly in the data, it might be beneficial to visualize over/underperformance on a map.  
+#### Average Overperformance for a district
+
+To obtain the overperformance score for a district, I compute a simple average over all schools in the district weighted by student count.
+
+#### Visualization
+
+TEA provides district boundaries in GeoJSON format ([Data Source](https://opendata.arcgis.com/datasets/e115fed14c0f4ca5b942dc3323626b1c_0.geojson)) which can be easily merged with campus data aggregated by district.
+
+I use a chloropleth map to visualize overperformance for districts first for the state and then by region.  
+
+#### Observations
+
+Overall, districts whose schools are over or under performing similar schools seem to be spread around the state.  
+![Texas Districts Chloropleth](/data/Texas_Districts_Chloro.png)
